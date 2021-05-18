@@ -10,7 +10,15 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+   if(numbers.length%2==1){
+      return true;
+   }
+   else
+     return false;
+  
 }
+// const arr = [1, 2, 7,5];
+// console.log( isArrayLengthOdd(arr));
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,7 +32,14 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  if(numbers.length%2==0){
+    return true;
+ }
+ else
+   return false;
 }
+// const arr = [1, 2, 7];
+// console.log(isArrayLengthEven(arr));
 
 /**
  * addLailaToArray(instructors):
@@ -36,9 +51,14 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  instructors.push("Laila");
+  return(instructors);
 }
+// const instructors=["mshary","hasan"];
+// console.log(addLailaToArray(instructors));
 
 /**
+ * 
  * eliminateTeam(teams):
  * - receives array `teams`
  * - removes the last element from the array and return it
@@ -48,7 +68,11 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  let last=teams.pop();
+  return last;
 }
+// const teams=(["Brazil", "Germany", "Italy"]);
+// console.log(eliminateTeam(teams));
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -62,7 +86,17 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  if(fruits.length%2==0){
+   fruits= fruits.slice((fruits.length)/2);
+   return fruits;
+  }
+  else if(fruits.length%2==1){
+    fruits=fruits.splice(fruits.length);
+    return fruits;
+  }  
 }
+// const fruits=["apple", "orange", "banana", "kiwi","strawbary"];
+// console.log(secondHalfOfArrayIfItIsEven(fruits));
 
 /**
  * youGottaCalmDown(shout):
@@ -80,7 +114,14 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  while(shout.endsWith("!!")){
+    shout=shout.slice(0,shout.length-1);
+   }
+   return shout;
+
 }
+let shout ="HI!!!!";
+console.log(youGottaCalmDown(shout));
 
 module.exports = {
   isArrayLengthOdd,
